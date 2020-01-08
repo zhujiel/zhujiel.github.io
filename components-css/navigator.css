@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  /*background: #e0e5ec;*/
+}
+
+.header-container {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 2px 1px -1px rgba(163, 177, 198, 1);
+  align-items: baseline;
+  opacity: 0.9;
+  z-index: 2;
+}
+.header-container .logo-outer {
+  min-width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.header-container .logo-outer .logo .logo-inner {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 0.5em;
+  box-shadow: -1px -1px 1px 0 rgba(255, 255, 255, 1),
+    1px 1px 1px 0 rgba(163, 177, 198, 1);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  background: linear-gradient(
+      90deg,
+      var(--c1, rgba(100, 100, 100, 0)),
+      var(--c2, #6e45e1) 100%,
+      var(--c1, rgba(100, 100, 100, 0))
+    )
+    var(--x, 0) / 200%;
+}
+.logo-inner h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  position: relative;
+  top: 8px;
+  color: white;
+}
+.header-container .logo {
+  text-decoration: none;
+  width: 100%;
+}
+.header-container .nav {
+}
+.header-container .logo-outer .logo .logo-inner:hover {
+  --x: 100%;
+}
+.header-container .nav ul {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.header-container .nav ul a li {
+  padding: 20px;
+  border-radius: 0.5em;
+  box-shadow: -1px -1px 1px 0 rgba(255, 255, 255, 1),
+    1px 1px 1px 0 rgba(163, 177, 198, 1);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  background: linear-gradient(
+      90deg,
+      var(--c1, rgba(100, 100, 100, 0)),
+      var(--c2, #6e45e1) 100%,
+      var(--c1, rgba(100, 100, 100, 0))
+    )
+    var(--x, 0) / 200%;
+}
+.header-container .nav ul li:hover {
+  --x: 100%;
+}
+.header-container .nav ul a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+}
