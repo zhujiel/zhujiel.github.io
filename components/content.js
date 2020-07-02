@@ -1,22 +1,35 @@
 import React, { useState } from "react";
 import "../components-css/content.css";
-import Animation from "../components/landing-animation.js";
+import Animation from "./landing-animation.js";
+import Card from "./project-card.js";
+import Piano from "./piano.js";
 
 const Content = () => {
   return (
-    <div className="content-container">
+    <React.Fragment>
       <div
         id="landing-page"
         className="landing active-element"
         data-content="landing"
       >
-        <div className="landing-text">
-          <h1>
-            All great actions and thoughts,
-            <br />
-            all have a insignificant beginning.
-          </h1>
-        </div>
+        <table>
+          <tr>
+            <td>
+              <h1>
+                All great actions and thoughts, all have a insignificant
+                beginning.
+              </h1>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span className="registerBtn">注册</span>
+            </td>
+            <td>
+              <span className="loginBtn">已注册</span>
+            </td>
+          </tr>
+        </table>
       </div>
 
       <div
@@ -24,17 +37,23 @@ const Content = () => {
         className="project active-element"
         data-content="project"
       >
-        <p>
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+        <div
+          className="project-pole"
+          data-card="project-pole"
+          id="project-pole"
+        >
+          <div className="blurBox"></div>
+          <Card name="Piano" />
+        </div>
+        <div id="c-d">
+          <div
+            id="Piano"
+            className="diplay-pole  active-pole"
+            data-pole="Piano"
+          >
+            <Piano />
+          </div>
+        </div>
       </div>
       <div
         id="gallery"
@@ -64,7 +83,7 @@ const Content = () => {
         className="about active-element"
         data-content="about"
       ></div>
-    </div>
+    </React.Fragment>
   );
 };
 

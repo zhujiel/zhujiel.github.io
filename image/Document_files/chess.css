@@ -1,0 +1,55 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess-border {
+  width: 500px;
+  height: 500px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess-container {
+  width: 450px;
+  height: 450px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess-cell {
+  width: 56.25px;
+  height: 56.25px;
+}
+.chess-cell.bg0 {
+  background-color: #b58863;
+}
+.chess-cell.bg1 {
+  background-color: #e9cda0;
+}
+
+.chess-figure {
+  position: absolute;
+}
+.chess-figure img {
+  width: 53px;
+  height: 53px;
+}
+.chess-board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.figures {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

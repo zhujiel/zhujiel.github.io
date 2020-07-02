@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
-import Navigator from "./navigator";
-import Content from "./content.js";
-import BackGround from "./landing-animation.js";
+//import Navigator from "./navigator";
+//import Content from "./content.js";
+//import BackGround from "./landing-animation.js";
 import Web from "./web.js";
 
 render(<Web />, document.getElementById("container"));

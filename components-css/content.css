@@ -1,26 +1,42 @@
-.content-container {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  transition: all 1s;
-  transition-duration: 300ms;
-}
-.content-container > .landing {
+.landing {
   width: 100%;
   height: 100%;
 }
 
 .project {
-  position: absolute;
-  top: 100px;
   text-shadow: -0.5px -0.5px 0.5px rgba(255, 255, 255, 1),
     0.5px 0.5px 0.5px rgba(163, 177, 198, 1);
-  color: #e0e5ec;
+  color: black;
   display: none;
   opacity: 0;
   transition: all 1s;
   transition-duration: 300ms;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+.project-pole {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-pole .blurBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  /*box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.1),
+    3px 3px 3px rgba(163, 177, 198, 0.1);*/
+}
+
 .gallery {
   position: absolute;
   top: 100px;
@@ -62,22 +78,39 @@ main {
 .content {
   height: 100%;
 }
-.landing-text {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 1em;
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   font-weight: bold;
-  transform: translate(-50%, -50%);
-  max-width: 1000px;
+  width: 100%;
+  position: absolute;
+
   /*background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1px);*/
 }
-.landing-text > h1 {
+
+.landing h1 {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 1),
     1px 1px 1px rgba(163, 177, 198, 1);
-  color: #e0e5ec;
+  color: black;
+  font-size: 3.5rem;
+}
+.landing .registerBtn {
+  background-color: blue;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.diplay-pole {
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+  display: none;
+  opacity: 0;
 }

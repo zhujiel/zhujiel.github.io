@@ -7,13 +7,16 @@ const Navigator = () => {
   const refresh = () => {
     window.location.reload(false);
   };
+  useEffect(() => {
+    history.pushState({}, "", "/index.html");
+  });
 
   return (
     <div className="header-container">
       <div className="logo-outer">
         <a href="#" onClick={refresh} className="logo">
           <div className="logo-inner">
-            <h1>ZJL</h1>
+            <span>Logo</span>
           </div>
         </a>
       </div>
@@ -22,16 +25,10 @@ const Navigator = () => {
         <nav className="nav">
           <ul>
             <a href="#" onClick={ShowContent}>
-              <li data-name="project">Projects</li>
+              <li data-name="project">注册</li>
             </a>
             <a href="#" onClick={ShowContent}>
-              <li data-name="gallery">Gallery</li>
-            </a>
-            <a href="#" onClick={ShowContent}>
-              <li data-name="music">Music</li>
-            </a>
-            <a href="#" onClick={ShowContent}>
-              <li data-name="about">About</li>
+              <li data-name="gallery">登陆</li>
             </a>
           </ul>
         </nav>

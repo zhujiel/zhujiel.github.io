@@ -1,9 +1,11 @@
 import React from "react";
 
 const Scroll = () => {
-  window.addEventListener("scroll", () => {
-    console.log("scrolled");
-  });
+  const scroll =
+    window.requestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback, 1000 / 60);
+    };
 };
 
 export default Scroll;

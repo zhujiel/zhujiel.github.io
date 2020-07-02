@@ -2,50 +2,51 @@ body {
   margin: 0;
   padding: 0;
   /*background: #e0e5ec;*/
+  background: linear-gradient(
+    0deg,
+    rgba(221, 243, 245, 1) 0%,
+    rgba(166, 220, 239, 1) 36%,
+    rgba(242, 170, 170, 1) 100%
+  );
 }
 
 .header-container {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-around;
-  box-shadow: 0 2px 1px -1px rgba(163, 177, 198, 1);
-  align-items: baseline;
-  opacity: 0.9;
+  align-items: center;
   z-index: 2;
 }
+.logo-outer a {
+  color: black;
+}
 .header-container .logo-outer {
-  min-width: 100px;
-  height: 60px;
   display: flex;
   align-items: center;
+  font-size: 2rem;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  line-height: 90px;
 }
 .header-container .logo-outer .logo .logo-inner {
   width: 100%;
   height: 100%;
   cursor: pointer;
   border-radius: 0.5em;
-  box-shadow: -1px -1px 1px 0 rgba(255, 255, 255, 1),
-    1px 1px 1px 0 rgba(163, 177, 198, 1);
+
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
-  background: linear-gradient(
-      90deg,
-      var(--c1, rgba(100, 100, 100, 0)),
-      var(--c2, #6e45e1) 100%,
-      var(--c1, rgba(100, 100, 100, 0))
-    )
-    var(--x, 0) / 200%;
+  background: white;
 }
 .logo-inner h1 {
   text-align: center;
-  font-size: 2em;
   margin: 0;
-  position: relative;
-  top: 8px;
-  color: white;
+
+  color: black;
 }
 .header-container .logo {
   text-decoration: none;
@@ -67,18 +68,10 @@ body {
 .header-container .nav ul a li {
   padding: 20px;
   border-radius: 0.5em;
-  box-shadow: -1px -1px 1px 0 rgba(255, 255, 255, 1),
-    1px 1px 1px 0 rgba(163, 177, 198, 1);
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
-  background: linear-gradient(
-      90deg,
-      var(--c1, rgba(100, 100, 100, 0)),
-      var(--c2, #6e45e1) 100%,
-      var(--c1, rgba(100, 100, 100, 0))
-    )
-    var(--x, 0) / 200%;
+  background: white;
 }
 .header-container .nav ul li:hover {
   --x: 100%;
@@ -86,7 +79,7 @@ body {
 .header-container .nav ul a {
   margin-left: 20px;
   text-decoration: none;
-  color: white;
+  color: black;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;

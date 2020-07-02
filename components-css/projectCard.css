@@ -1,0 +1,63 @@
+.card-container {
+  width: 200px;
+  height: 160px;
+  float: left;
+  margin-left: 20px;
+  z-index: 100;
+}
+.card-container a {
+  text-decoration: none;
+}
+
+.card-container > a .card1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 7px;
+  background: #fc0;
+  backface-visibility: hidden;
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform 0.5s;
+  box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
+    3px 3px 3px rgba(163, 177, 198, 0.2);
+}
+
+.card-container > a .card1 img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.card-container > a .card2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 7px;
+  background: #e0e5ec;
+  backface-visibility: hidden;
+  transform: perspective(600px) rotateY(180deg);
+  transition: transform 0.5s;
+  box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
+    3px 3px 3px rgba(163, 177, 198, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container > a .card2 h2 {
+  color: black;
+}
+
+.card-container:hover > a .card1 {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card-container:hover > a .card2 {
+  transform: perspective(600px) rotateY(0deg);
+}
+#c-d {
+  width: 100%;
+  height: 100%;
+}

@@ -3,14 +3,13 @@ import Menu from "../components/navigator.js";
 import Content from "./content.js";
 import BackGround from "./landing-animation.js";
 import "../components-css/web.css";
+import HomePage from "./homePage.js";
 
 const web = () => {
   return (
-    <div className="web">
-      <BackGround />
-      <Menu />
-      <Content />
-    </div>
+    <React.Fragment>
+      <HomePage />
+    </React.Fragment>
   );
 };
 export default web;

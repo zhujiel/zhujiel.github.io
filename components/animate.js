@@ -7,15 +7,7 @@ const animate = () => {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
 
-  const colors = [
-    "#2185C5",
-    "#7ECEFD",
-    "#FFF6E5",
-    "#FF7F66",
-    "#e42c64",
-    "#614ad3",
-    "#2d248a"
-  ];
+  const colors = ["#2185C5", "#7ECEFD", "#FFF6E5"];
 
   //Random range
   function randomIntFromRange(min, max) {
@@ -40,9 +32,26 @@ const animate = () => {
     this.update = () => {
       let lastPoint = { x: this.x, y: this.y };
       this.color = this.color;
+      //console.log(c);
       this.radians += this.velocity;
       this.x = x + Math.cos(this.radians) * this.distanceFromCenter;
       this.y = y + Math.sin(this.radians) * this.distanceFromCenter;
+
+      let changedColorDecimal = parseInt(randomColor(colors).substr(1), 16);
+      //this.color = this.color;
+      let colorDecimal = parseInt(this.color.substr(1), 16);
+      let Diff = colorDecimal - changedColorDecimal;
+      //console.log(Math.abs(Diff));
+
+      if (colorDecimal > changedColorDecimal) {
+        colorDecimal -= 100;
+      } else if (colorDecimal < changedColorDecimal) {
+        colorDecimal += 100;
+      }
+
+      let c = "#" + colorDecimal.toString(16);
+      this.color = c;
+
       this.draw(lastPoint);
     };
     this.change = () => {
@@ -78,16 +87,11 @@ const animate = () => {
       );
     }
   }
-  setInterval(() => {
-    particles.forEach(partic => {
-      partic.color = randomColor(colors);
-      partic.radius = Math.random() * 5 + 1;
-    });
-  }, 1500);
 
   // Animation Loop
   function animate() {
     requestAnimationFrame(animate);
+
     ctx.fillStyle = "rgba(0, 0, 0,0.2 )";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     //c.clearRect(0, 0, canvas.width, canvas.height);
